@@ -1,5 +1,5 @@
 name: workflow para node
-on: push
+on: [push, workflow_dispatch]
 #on serve para definir o que vai triggar a pipeline
 jobs:
   test:
