@@ -1,0 +1,11 @@
+name: Output information
+on: Workflow_dispatch
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output github context
+        run: echo "${{ toJSON(github) }}"
+        #serve para acessar valores dinamicos.
+        #Contexto é um conjunto de informações que o github disponibiliza durante a execução do workflow
+        #pesquisar por githubactions functions e githubactions context
