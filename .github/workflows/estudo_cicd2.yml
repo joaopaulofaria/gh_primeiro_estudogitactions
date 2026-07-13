@@ -16,8 +16,11 @@ jobs:
       - name: Run tests
         run: npm test
   deploy:
+    needs: test
+    #defini que um job so vai executar depois do outro
     runs-on: ubuntu-latest
     #cada job tem seu proprio runner, o que permite isolamento
+    #os dois jobs são executados em paralelo
     steps:
       - name: Get code
         uses: actions/checkout@v3
